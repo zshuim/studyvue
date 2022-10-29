@@ -1,11 +1,12 @@
 <template>
   <div class="about">
     <h1 id="h1">{{msg}}</h1>
-    <input type="button" id="but_con" value="console" @click="con_bald1"/>
+    <input type="button" id="but_con" value="console" @click="login"/>
   </div>
 </template>
 <script>
-import con_bald from '@/utils/about'
+import * as loginapi from '@/utils/about'
+
 export default {
 data(){
   return{
@@ -13,12 +14,12 @@ data(){
   }
 },
 methods:{
-  con_bald1(){
-    con_bald();
+  login(){
+    loginapi.login(this,{uid:'root',pwd:"123456"})
   }
 },
 beforeMount(){
-  console.log(document.getElementById('h1').innerText)
+  // console.log(document.getElementById('h1').innerText)
 },
 mounted(){
   console.log(document.getElementById('h1').innerText)

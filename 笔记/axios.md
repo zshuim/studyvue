@@ -26,10 +26,10 @@
     requests.interceptors.response.use((res)=>{
         <!-- 成功回调：服务器响应数据回来以后，响应拦截器可以检测到，可以做一些事情 -->
         return res.data;
-    ,(error)={
+   } ,(error)=>{
         <!-- 相应失败的回调 -->
         return Promise.reject(new Error('fail'));
-    }})
+    })
 
 
     <!-- 对外暴露 -->
@@ -58,7 +58,7 @@
         devServer:{
             proxy:{
                 '/api':{
-                    target:'http://192.168.xx.xx:3000',
+                    target:'http://localhost:3000',
                     <!-- 路径重写 -->
                     pathRewrite:{'^/api':''},
                 },
@@ -66,4 +66,19 @@
         },
     })
   ~~~
-### 
+### 发起请求的三种方式
+- #### post请求
+    - #### `axios.post()`
+- #### get请求
+    - #### `axios.get()`
+- #### 第三种请求
+    - #### 
+        ~~~js
+            axios({
+                url:'请求的路径'
+                method:'请求的方式，默认get'
+                params:{} // get请求方式:前端给后端传递数据
+                data:{} //post请求方式:前端给后端传递数据
+            })
+        ~~~
+
