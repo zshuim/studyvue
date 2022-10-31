@@ -2,9 +2,12 @@
 import { Message } from "element-ui";
 import requests from "./request";
 import router from '@/router'
+import { startLoading , stopLoading} from '@/utils/reload'
 
 // !zy < !--请求拦截器: 在发请求之前，请求拦截器可以检测到，可以在请求发出去之前做一些事情-- >
 requests.interceptors.request.use((config) => {
+    // 开始请求，加载开始
+    startLoading();
     // < !--config: 配置对象，对象里面又一个属性很重要，header请求头-- >
     // 判断是否存在token,如果存在将每个页面header添加token
     if (sessionStorage.getItem("token")) {
@@ -16,6 +19,8 @@ requests.interceptors.request.use((config) => {
 });
 //  !zy < !--响应拦截器: -->
 requests.interceptors.response.use((res) => {
+    // 请求接受，结束加载
+    stopLoading();
     // < !--成功回调：服务器响应数据回来以后，响应拦截器可以检测到，可以做一些事情-- >
     console.log(res.data);
     if (res.data.code == -1) {
@@ -24,6 +29,8 @@ requests.interceptors.response.use((res) => {
     }
     return res.data.data;
 }, (error) => {
+    // 请求接受，结束加载
+    stopLoading();
     // < !--相应失败的回调 -->
     console.log("error--" + error);
     if (error.response) {

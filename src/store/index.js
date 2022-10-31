@@ -5,11 +5,11 @@ Vue.use(Vuex)
 export default new Vuex.Store({
     state: {
         loginUserInfo: {},
-        sideroute: {},
+        sideRoute: {},
     },
 
     mutations: {
-        setUserINfo(state,userInfo) {
+        setUserINfo(state, userInfo) {
             state.loginUserInfo = userInfo;
         },
         setSideRoute(state, sideRoute) {

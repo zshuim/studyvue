@@ -1,0 +1,81 @@
+{
+  "loginUserInfo": {
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2Njc4MjMyNzAsInVzZXJpZCI6IjM0NjkwMDIwMTE0MDY0OTk4NCJ9.ipDNhkl0tbaHwA1Xmo_UahgQTn_grH1DiNr_le9u8eY",
+    "info": {
+      "realName": "超管-野兽先辈态",
+      "roles": [{ "id": "346900200205320192", "roleName": "超级管理员" }],
+      "userName": "root"
+    },
+    "route": [
+      {
+        "id": "7",
+        "menuName": "用户管理",
+        "iconUrl": "/ico_User_manage",
+        "parentMenuId": "0",
+        "linkUrl": "/User_manage",
+        "children": [
+          {
+            "id": "8",
+            "menuName": "学生管理",
+            "iconUrl": "/ico_Student_Manage",
+            "parentMenuId": "7",
+            "linkUrl": "/Student_Manage",
+            "children": []
+          },
+          {
+            "id": "9",
+            "menuName": "教师管理",
+            "iconUrl": "/ico_Teacher_Manage",
+            "parentMenuId": "7",
+            "linkUrl": "/Teacher_Manage",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "10",
+        "menuName": "菜单管理",
+        "iconUrl": "/ico_Menu_manage",
+        "parentMenuId": "0",
+        "linkUrl": "/Menu_manage",
+        "children": []
+      }
+    ]
+  },
+  "sideroute": {},
+  "sideRoute": [
+    {
+      "id": "7",
+      "menuName": "用户管理",
+      "iconUrl": "/ico_User_manage",
+      "parentMenuId": "0",
+      "linkUrl": "/User_manage",
+      "children": [
+        {
+          "id": "8",
+          "menuName": "学生管理",
+          "iconUrl": "/ico_Student_Manage",
+          "parentMenuId": "7",
+          "linkUrl": "/Student_Manage",
+          "children": []
+        },
+        {
+          "id": "9",
+          "menuName": "教师管理",
+          "iconUrl": "/ico_Teacher_Manage",
+          "parentMenuId": "7",
+          "linkUrl": "/Teacher_Manage",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "menuName": "菜单管理",
+      "iconUrl": "/ico_Menu_manage",
+      "parentMenuId": "0",
+      "linkUrl": "/Menu_manage",
+      "children": []
+    }
+  ]
+}

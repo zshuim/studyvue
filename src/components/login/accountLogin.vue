@@ -13,6 +13,7 @@
                  <img :src="codeInfo.verifyCodeImgUrl" alt="点击刷新图片" @click="get_code" />
             </el-form-item>
             <el-button class="commitUser" type="primary" @click="commitUser">登录</el-button>
+            <nav class="chagepwd"><router-link to="/password">忘记密码</router-link></nav>
         </el-form>
     </div>
 </template>
@@ -57,7 +58,6 @@ export default {
                             window.sessionStorage.setItem('token',resp.token);
                             loginapi.transformationRouter(resp.route);
                             this.$store.dispatch('setUserINfoAsync',resp);
-                            this.$store.commit('consol_state');
                         }
                     })
                 }
@@ -83,11 +83,18 @@ export default {
     position:absolute;
     bottom:40px;
     left:5%;
+    height: 15%;
  }
 .codeitem {
     text-align: left;
 }
 .codeitem img {
     height: 50px;
+}
+.accountBox .chagepwd{
+    position:absolute;
+    bottom: 2px;
+    right: 5%;
+    padding: 0 ;
 }
 </style>

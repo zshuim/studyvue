@@ -7,9 +7,9 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'home',
+    name: 'home1',
     component: HomeView,
-    redirect:'/login'
+    redirect:'/home'
   },
   {
     path: '/about',
@@ -28,6 +28,11 @@ const routes = [
     path: '/login',
     name: 'login',
     component: () => import(/* webpackChunkName: "password" */ '../views/Login/login.vue')
+  },
+  {
+    path: '/home',
+    name: 'home',
+    component: () => import(/* webpackChunkName: "password" */ '../views/home/home.vue')
   },
 
   {
