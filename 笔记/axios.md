@@ -13,7 +13,8 @@
     const requests = axios.create({
         <!-- 配置对象 -->
         <!-- 基础路径，发起请求的时候，路径当中会自带api -->
-        baseUrl: "/api",
+        <!-- baerURL的URL--一定要大写 -->
+        baseURL: "/api",
         <!-- 设置请求超时 -->
         timeout:5000,
     });

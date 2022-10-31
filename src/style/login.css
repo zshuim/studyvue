@@ -1,0 +1,58 @@
+.panel {
+    width: 940px;
+    height: 444px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.panel .imgBox {
+    width: 470px;
+    height: 444px;
+    background-color: antiquewhite;
+    background-image: url(../assets/login_photo.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    position: absolute;
+    top:0px;
+    left: 0px;
+}
+.panel .operationBox {
+    width: 470px;
+    height: 444px;
+    /* background-color: antiquewhite; */
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-radius: 20px;
+    border: 1px solid ;
+}
+.panel .operationBox .loginMethod {
+    font-size: 20px;
+    /* background-color: rgb(94, 54, 5); */
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.panel .operationBox .loginMethod li{
+    float: left;
+    width: calc(50% - 0.5px);
+    height: 100%;
+    line-height: 50px;
+}
+.panel .operationBox .loginMethod li:nth-child(1) {
+    border-top-left-radius: 20px;
+    border-bottom: 2px solid rgba(0, 62, 248, 0.9);
+    color: rgba(0, 62, 248, 0.9);
+    font-weight: 600;
+}
+.panel .operationBox .loginMethod li:nth-child(2) {
+    border-top-right-radius: 20px;
+}
+
+.panel .operationBox .methodBox{
+/* background-color: aquamarine; */
+position: relative;
+height: calc(100% - 120px);
+}

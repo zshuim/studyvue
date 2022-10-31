@@ -22,7 +22,7 @@
     <div class="authenticate" v-if="step==0">
         <el-form class="code" label-width="100px" :rules="codeRules" ref="codeRefs" :model="codeForm">
             <el-form-item label="重置账号：" style="text-align:left">
-                <span >{{account}}</span>
+                <span >{{codeForm.account}}</span>
             </el-form-item>
             <el-form-item label="验证码：" style="text-align:left;display: inline;" id="code" prop="code">
                 <el-input style="display: inline-block;width:50%" v-model="codeForm.code"></el-input>
@@ -34,11 +34,11 @@
     <!-- 密码修改 -->
     <div class="changePwd" v-if="step==1">
         <el-form label-width="150px" id="changePwd" :rules="pwdRules" :model="pwdForm" ref="pwdRefs">
-            <el-form-item label="新的登录密码：" prop="newpwd">
-                <el-input v-model="pwdForm.newpwd" type="password"></el-input>
+            <el-form-item label="新的登录密码：" prop="newpwd" :rules="[{ required: true, message: '密码不能为空', trigger: 'blur' }]">
+                <el-input v-model="pwdForm.newpwd"></el-input>
             </el-form-item>
             <el-form-item label="确认新的登录密码：" prop="newpwds">
-                <el-input v-model="pwdForm.newpwds" type="password"></el-input>
+                <el-input v-model="pwdForm.newpwds" ></el-input>
             </el-form-item>
             <el-button class="commitPwd" type="primary" style="width:120px;" @click="commitPwd">确定</el-button>
         </el-form>
@@ -47,12 +47,8 @@
 </template>
 
 <script>
-import Step1 from "@/components/password/step1";
 import * as loginapi from "@/utils/login"
 export default {
-  components: {
-    Step1,
-  },
   beforeCreate() {},
   created() {
     this.get_code();
@@ -62,9 +58,9 @@ export default {
   data() {
     return {
         step:0,
-        account:"20219***322",
         codeInfo:{},
         codeForm:{
+            account:"20219***322",
             code:""
         },
         codeRules:{
@@ -85,7 +81,7 @@ export default {
         loginapi.get_code().then((res)=>{this.codeInfo=res});
     },
     commitCode(){
-        if(loginapi.comparisonCode(this)){
+        if(loginapi.comparisonCode(this.codeForm.code,this.codeInfo.verifyCode)){
             this.step = 1;
         }
         else {

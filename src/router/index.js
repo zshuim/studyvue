@@ -8,7 +8,8 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: HomeView,
+    redirect:'/login'
   },
   {
     path: '/about',
@@ -23,6 +24,23 @@ const routes = [
     name: 'password',
     component:()=> import(/* webpackChunkName: "password" */ '../views/password.vue')
   },
+  {
+    path: '/login',
+    name: 'login',
+    component: () => import(/* webpackChunkName: "password" */ '../views/Login/login.vue')
+  },
+
+  {
+    path: '/404',
+    name: '404',
+    component: () => import(/* webpackChunkName: "password" */ '../views/error/404.vue')
+  },
+  {
+    path: '/401',
+    name: '401',
+    component: () => import(/* webpackChunkName: "password" */ '../views/error/401.vue')
+  },
+
 ]
 
 const router = new VueRouter({

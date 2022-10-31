@@ -1,7 +1,7 @@
 // 忘记密码第一步组件
 <template>
-    <div class="step1">
-    <el-button></el-button>
+    <div class="wechatBox">
+    微信
     </div>
 </template>
 
@@ -20,3 +20,9 @@ export default {
     }
 }
 </script>
+<style scoped>
+.wechatBox {
+
+    margin-top: 50px;
+}
+</style>
