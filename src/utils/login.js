@@ -7,6 +7,10 @@ export function get_code() {
 }
 
 // 验证码比对
+/*
+    code:用户输入的验证码
+    truecode:正确的验证码
+*/
 export function comparisonCode(code, truecode) {
     if (code.toUpperCase() == truecode.toUpperCase()) {
         return true;
@@ -14,6 +18,11 @@ export function comparisonCode(code, truecode) {
     else return false;
 }
 // 提交前表单是否填写完整判断
+/**
+ * 
+ * @param {*} formRef 要验证的表单的refs
+ * @returns 
+ */
 export function judgeFormIntegrity(formRef) {
     var flag = false;
      formRef.validate((valid) => {
@@ -30,6 +39,11 @@ export function judgeFormIntegrity(formRef) {
     return flag;
 }
 // 提交新密码
+/**
+ * 
+ * @param {*} vueObj 修改密码页面的vue对象
+ * @returns 
+ */
 export function commitNewPwd(vueObj) {
     var flag = false;
     console.log("这是重置密码请求函数");
@@ -45,6 +59,11 @@ export function commitNewPwd(vueObj) {
     return true;
 }
 // 提交登录信息
+/**
+ * 
+ * @param {*} vueObj 登录页面的vue对象
+ * @returns 
+ */
 export function commitLoginUser(vueObj) {
     return requests({
         url: "/login",
@@ -58,6 +77,10 @@ export function commitLoginUser(vueObj) {
 }
 
 // 将路由格式改成f父级[子级[]]
+/**
+ * 将转化好的对象放到vuex中
+ * @param {*} routerObj 路由数组对象
+ */
 export function transformationRouter(routerObj) {
     var routers = routerObj;
     for (var i = 0; i < routers.length; i++) {

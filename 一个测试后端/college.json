@@ -1,0 +1,49 @@
+{
+  "data": {
+    "data": {
+      "sysDeptCount": 5,
+      "sysDeptList": [
+        {
+          "id": "373267803538456576",
+          "deptName": "电机学院",
+          "parentDeptId": null,
+          "deptType": "学院",
+          "createrId": "346900201140649984",
+          "delFlag": "0"
+        },
+        {
+          "id": "373932980466352128",
+          "deptName": "测试用学院",
+          "parentDeptId": null,
+          "deptType": "学院",
+          "createrId": "346900201140649984",
+          "delFlag": "0"
+        },
+        {
+          "id": "374403704234704896",
+          "deptName": "学院3",
+          "parentDeptId": null,
+          "deptType": "学院",
+          "createrId": "346900201140649984",
+          "delFlag": "0"
+        },
+        {
+          "id": "374403733087322112",
+          "deptName": "学院1",
+          "parentDeptId": null,
+          "deptType": "学院",
+          "createrId": "346900201140649984",
+          "delFlag": "1"
+        },
+        {
+          "id": "374403757955350528",
+          "deptName": "学院5",
+          "parentDeptId": null,
+          "deptType": "学院",
+          "createrId": "346900201140649984",
+          "delFlag": "1"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.app_menuManage {
+  height: 100%;
+  line-height: 0px;
+  position: relative;
+}
+.app_menuManage .main {
+position: absolute;
+  margin-top: 30px;
+  width: 100%;
+  /* height: 90%; */
+  /* bottom: 10px; */
+}
+
+
+.app_menuManage .main .menutableBox {
+  margin-top: 30px;
+}

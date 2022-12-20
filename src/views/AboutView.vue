@@ -15,7 +15,6 @@ data(){
 },
 methods:{
   login(){
-    loginapi.login(this,{uid:'root',pwd:"123456"})
   }
 },
 beforeMount(){

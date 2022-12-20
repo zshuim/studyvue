@@ -1,0 +1,144 @@
+{
+  "data": {
+    "data": {
+      "sysMenuList": [
+        {
+          "id": "1",
+          "menuName": "主页",
+          "iconUrl": "/ico_home",
+          "parentMenuId": "0",
+          "linkUrl": "/home"
+        },
+        {
+          "id": "2",
+          "menuName": "题库管理",
+          "iconUrl": "/ico_Item_bank_Manage",
+          "parentMenuId": "0",
+          "linkUrl": "/Item_bank_Manage"
+        },
+        {
+          "id": "3",
+          "menuName": "任务管理",
+          "iconUrl": "/ico_Task_Manage",
+          "parentMenuId": "0",
+          "linkUrl": "/Task_Manage"
+        },
+        {
+          "id": "4",
+          "menuName": "练习管理",
+          "iconUrl": "/ico_Practice_Manag",
+          "parentMenuId": "3",
+          "linkUrl": "/Practice_Manag"
+        },
+        {
+          "id": "5",
+          "menuName": "考试管理",
+          "iconUrl": "/ico_Examination_Manage",
+          "parentMenuId": "3",
+          "linkUrl": "/Examination_Manage"
+        },
+        {
+          "id": "6",
+          "menuName": "组织管理",
+          "iconUrl": "/ico_Organization_Manage",
+          "parentMenuId": "0",
+          "linkUrl": "/Organization_Manage"
+        },
+        {
+          "id": "7",
+          "menuName": "用户管理",
+          "iconUrl": "/ico_User_manage",
+          "parentMenuId": "0",
+          "linkUrl": "/User_manage"
+        },
+        {
+          "id": "8",
+          "menuName": "学生管理",
+          "iconUrl": "/ico_Student_Manage",
+          "parentMenuId": "7",
+          "linkUrl": "/Student_Manage"
+        },
+        {
+          "id": "9",
+          "menuName": "教师管理",
+          "iconUrl": "/ico_Teacher_Manage",
+          "parentMenuId": "7",
+          "linkUrl": "/Teacher_Manage"
+        },
+        {
+          "id": "10",
+          "menuName": "菜单管理",
+          "iconUrl": "/ico_Menu_manage",
+          "parentMenuId": "0",
+          "linkUrl": "/Menu_manage"
+        },
+        {
+          "id": "11",
+          "menuName": "角色管理",
+          "iconUrl": "/ico_Role_Manage",
+          "parentMenuId": "0",
+          "linkUrl": "/Role_Manage"
+        },
+        {
+          "id": "12",
+          "menuName": "权限管理",
+          "iconUrl": "/ico_Authority_Manage",
+          "parentMenuId": "0",
+          "linkUrl": "/Authority_Manage"
+        },
+        {
+          "id": "13",
+          "menuName": "个人中心",
+          "iconUrl": "/ico_Personal_Center",
+          "parentMenuId": "0",
+          "linkUrl": "/Personal_Center"
+        },
+        {
+          "id": "14",
+          "menuName": "个人信息",
+          "iconUrl": "/ico_Personal_Info",
+          "parentMenuId": "13",
+          "linkUrl": "/Personal_Info"
+        },
+        {
+          "id": "15",
+          "menuName": "修改密码",
+          "iconUrl": "/ico_Modify_Password",
+          "parentMenuId": "13",
+          "linkUrl": "/Modify_Password"
+        },
+        {
+          "id": "16",
+          "menuName": "我的任务",
+          "iconUrl": "/ico_My_Task",
+          "parentMenuId": "0",
+          "linkUrl": "/My_Task"
+        },
+        {
+          "id": "17",
+          "menuName": "我的考试",
+          "iconUrl": "/ico_My_Test",
+          "parentMenuId": "16",
+          "linkUrl": "/My_Test"
+        },
+        {
+          "id": "18",
+          "menuName": "我的练习",
+          "iconUrl": "/ico_My_Practice",
+          "parentMenuId": "16",
+          "linkUrl": "/My_Practice"
+        },
+        {
+          "id": "19",
+          "menuName": "学情分析",
+          "iconUrl": "/ico_Learning_Situation",
+          "parentMenuId": "16",
+          "linkUrl": "/Learning_Situation"
+        }
+      ],
+      "sysMenuCount": 19
+    },
+    "code": 0,
+    "msg": "操作成功"
+  }
+}

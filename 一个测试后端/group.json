@@ -1,0 +1,51 @@
+{
+  "data": {
+    "data": {
+      "sysDeptCount": 5,
+      "sysDeptList": [
+        {
+          "id": "373591773127114752",
+          "deptName": "计算机四班",
+          "parentDeptId": "373252869039587328",
+          "deptType": "教师组",
+          "createrId": "346900201140649984",
+          "delFlag": "0"
+        },
+        {
+          "id": "373597617310924800",
+          "deptName": "机电",
+          "parentDeptId": "373267803538456576",
+          "deptType": "行政班级",
+          "createrId": "346900201140649984",
+          "delFlag": "1"
+        },
+        {
+          "id": "373605820643934208",
+          "deptName": "计算机一班",
+          "parentDeptId": "373252869039587328",
+          "deptType": "虚拟班级",
+          "createrId": "346900201140649984",
+          "delFlag": "1"
+        },
+        {
+          "id": "373933182057185280",
+          "deptName": "测试用行政班级",
+          "parentDeptId": "373932980466352128",
+          "deptType": "行政班级",
+          "createrId": "346900201140649984",
+          "delFlag": "0"
+        },
+        {
+          "id": "374618564914577408",
+          "deptName": "计算机三班",
+          "parentDeptId": "373252869039587328",
+          "deptType": "行政班级",
+          "createrId": "346900201140649984",
+          "delFlag": "1"
+        }
+      ]
+    },
+    "code": 0,
+    "msg": "操作成功"
+  }
+}

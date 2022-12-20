@@ -1,0 +1,102 @@
+.app_deptManage {
+  height: 100%;
+  line-height: 0px;
+  position: relative;
+}
+
+.app_deptManage .tabsBox {
+  margin-top: 30px;
+  width: 100%;
+  height: 90%;
+}
+.app_deptManage .tabsBox .tabBox {
+    width: 100%;
+    height: 100%;
+}
+.app_deptManage .tabsBox .tabpaneBox {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.collegeBox .headBox {
+    position: relative;
+    width: 100%;
+    height: 70px;
+}
+.collegeBox .headBox .searchBox {
+    position: absolute;
+    width: 249px;
+    top: 20px;
+    left: 20px;
+}
+.collegeBox .headBox .collegeButtonBox {
+    position: absolute;
+    right: 65px;
+    top: 20px;
+}
+.collegeBox .tableBox {
+    width: 95%;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+.collegeBox .pageBox {
+    margin-top: 20px;
+}
+
+
+
+
+
+.GroupBox .headBox {
+    position: relative;
+    width: 100%;
+    height: 70px;
+}
+.GroupBox .headBox .searchBox {
+    position: absolute;
+    width: 249px;
+    top: 20px;
+    left: 20px;
+}
+.GroupBox .headBox .collegeButtonBox {
+    position: absolute;
+    right: 65px;
+    top: 20px;
+}
+.GroupBox .tableBox {
+    width: 95%;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+.GroupBox .pageBox {
+    margin-top: 20px;
+}
+
+
+.UserBox .headBox {
+    position: relative;
+    width: 100%;
+    height: 70px;
+}
+.UserBox .headBox .searchBox {
+    position: absolute;
+    width: 249px;
+    top: 20px;
+    left: 20px;
+}
+.UserBox .headBox .collegeButtonBox {
+    position: absolute;
+    right: 65px;
+    top: 20px;
+}
+.UserBox .tableBox {
+    width: 95%;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+.UserBox .pageBox {
+    margin-top: 20px;
+}
+

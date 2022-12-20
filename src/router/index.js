@@ -32,8 +32,32 @@ const routes = [
   {
     path: '/home',
     name: 'home',
-    component: () => import(/* webpackChunkName: "password" */ '../views/home/home.vue')
+    component: () => import(/* webpackChunkName: "password" */ '../views/home/home.vue'),
+    redirect: '/Menu_manage',
+    children: [
+      {
+        path: '/Student_Manage',
+        name: 'Stu',
+        component: () => import(/* webpackChunkName: "password" */ '../views/UserManage/Stu.vue')
+      },
+      {
+        path: '/Teacher_Manage',
+        name: 'Tch',
+        component: () => import(/* webpackChunkName: "password" */ '../views/UserManage/Tch.vue')
+      },
+      {
+        path: '/Organization_Manage',
+        name: 'dept',
+        component: () => import(/* webpackChunkName: "password" */ '../views/deptManagte/DeptManagement.vue')
+      },
+      {
+        path: '/Menu_manage',
+        name: 'Menu',
+        component: () => import(/* webpackChunkName: "password" */ '../views/menuManage.vue')
+      },
+    ],
   },
+  
 
   {
     path: '/404',

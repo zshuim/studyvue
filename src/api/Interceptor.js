@@ -1,11 +1,20 @@
 // !zy 拦截器 模块
-import { Message } from "element-ui";
+import { Message ,Popconfirm,MessageBox} from "element-ui";
+// import 'element-ui/lib/theme-chalk/index.css';
 import requests from "./request";
 import router from '@/router'
-import { startLoading , stopLoading} from '@/utils/reload'
+import { startLoading, stopLoading, playMessageBox } from '@/utils/reload'
+import axios from "axios";
+import store from "@/store"
+
+
 
 // !zy < !--请求拦截器: 在发请求之前，请求拦截器可以检测到，可以在请求发出去之前做一些事情-- >
-requests.interceptors.request.use((config) => {
+requests.interceptors.request.use(async (config) => {
+    config.cancelToken = new axios.CancelToken(function (c) {
+        // 将c保存在vuex的cancelAxios中
+        store.dispatch('setCancelAxios', c)
+    })
     // 开始请求，加载开始
     startLoading();
     // < !--config: 配置对象，对象里面又一个属性很重要，header请求头-- >
@@ -13,6 +22,21 @@ requests.interceptors.request.use((config) => {
     if (sessionStorage.getItem("token")) {
         config.headers.token = `${sessionStorage.getItem("token")}`;
     }
+
+    if (config.method == "get") {
+    }
+    else if (config.method == "post") {
+        if (await MessageBox.confirm('确定删除该项?', '提示', {
+            confirmButtonText: '确定',
+            cancelButtonText: '取消',
+            type: 'warning'
+        }) == 'cancel') {
+            store.state.cancelAxios('终止axios请求')
+        }
+    }
+
+
+
     return config;
 }, function (error) {
     return Promise.reject(error)
@@ -32,7 +56,7 @@ requests.interceptors.response.use((res) => {
     // 请求接受，结束加载
     stopLoading();
     // < !--相应失败的回调 -->
-    console.log("error--" + error);
+    console.log(error);
     if (error.response) {
         switch (error.response.status) {
             case 404: router.push({
@@ -45,8 +69,12 @@ requests.interceptors.response.use((res) => {
             }); break;
         }
     }
-    Message.error(error.stack);
-        
+    if (error.message == "终止axios请求" || error == 'cancel') {
+        Message("终止axios请求");
+    }
+    else { Message.error(error.stack); }
+    
+
     return false;
 })
 

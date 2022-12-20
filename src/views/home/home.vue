@@ -6,14 +6,12 @@
         <div class="headerimg">
           {{ uernameimg }}
         </div>
-        <div class="userNameBox">
-          
-        </div>
+        <div class="userNameBox"></div>
         <el-dropdown class="userNameBox">
-         <span> {{ uername }}</span>
+          <span> {{ uername }}</span>
           <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item >个人信息</el-dropdown-item>
-            <el-dropdown-item >退出</el-dropdown-item>
+            <el-dropdown-item>个人信息</el-dropdown-item>
+            <el-dropdown-item @click.native="logOut">退出</el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
       </el-header>
@@ -64,8 +62,10 @@
           </el-aside>
         </div>
         <el-container>
-          <el-main>Main</el-main>
-          <el-footer>Footer</el-footer>
+          <el-main>
+            <router-view></router-view>
+          </el-main>
+          <!-- <el-footer>Footer</el-footer> -->
         </el-container>
       </el-container>
     </el-container>
@@ -86,7 +86,14 @@ export default {
       uername: "张水淼",
     };
   },
-  methods: {},
+  methods: {
+    logOut() {
+      console.log(12);
+      window.sessionStorage.clear();
+      this.$router.replace("/login");
+      console.log(1);
+    },
+  },
 };
 </script>
 <style src="@/style/home.css" scoped></style>

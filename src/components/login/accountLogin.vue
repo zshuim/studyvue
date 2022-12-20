@@ -58,6 +58,7 @@ export default {
                             window.sessionStorage.setItem('token',resp.token);
                             loginapi.transformationRouter(resp.route);
                             this.$store.dispatch('setUserINfoAsync',resp);
+                            this.$router.push('/home');
                         }
                     })
                 }

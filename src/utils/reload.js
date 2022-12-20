@@ -1,5 +1,7 @@
 // 操作加载界面
 import { Loading } from "element-ui";
+import ElementUI from "element-ui";
+
 // 页面加载效果
 let loading;
 let loadingNum = 0; // 内存中存在的请求数量
@@ -22,3 +24,5 @@ export function stopLoading() {
         // console.log(loading);
     }
 }
+
+

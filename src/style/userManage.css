@@ -1,0 +1,70 @@
+.app_useManage {
+  height: 100%;
+  line-height: 0px;
+  position: relative;
+}
+.app_useManage .main {
+  margin-top: 30px;
+  width: 100%;
+  height: 90%;
+}
+.app_useManage .main .headerBox {
+  line-height: 0px;
+  position: relative;
+  *zoom: 1;
+  height: 40px;
+  margin-bottom: 20px;
+  /* overflow: hidden; */
+}
+.app_useManage .main .headerBox::before,
+.app_useManage .main .headerBox::after {
+  content: "";
+  display: table;
+}
+.app_useManage .main .headerBox::after {
+  clear: both;
+}
+
+.app_useManage .main .headerBox .searchTool {
+  position: absolute;
+  left: 0px;
+}
+.app_useManage .main .headerBox .deptsearchTool {
+  position: absolute;
+  left: 250px;
+}
+.app_useManage .main .headerBox .filebuttonarea {
+  position: absolute;
+  left: 500px;
+}
+.app_useManage .main .headerBox .usermangebutton {
+  position: absolute;
+  right: 20px;
+}
+.app_useManage .main .tableBox {
+  line-height: 0px;
+  position: relative;
+}
+.app_useManage .main .tableBox .userMangeTable {
+  margin-left: 50px;
+}
+.app_useManage .main .pageBox {
+  margin-top: 20px;
+}
+.app_useManage .adduserBox {
+  line-height: 20px;
+  font-size: large;
+}
+
+/* 清除浮动 */
+.clearfix::before,.clearfix::before{
+    content: "";
+    display: table;
+}
+
+.clearfix::after{
+    clear: both;
+}
+.clearfix{
+    *zoom:1;
+}

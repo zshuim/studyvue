@@ -1,0 +1,89 @@
+{
+  "data": {
+    "data": {
+      "sysDeptCount": [10],
+      "sysDeptList": [
+        {
+          "id": "373252869039587328",
+          "deptName": "数智1学院",
+          "parentDeptId": null,
+          "deptType": "学院",
+          "createrId": "346900201140649984",
+          "delFlag": "2"
+        },
+        {
+          "id": "373267803538456576",
+          "deptName": "电机学院",
+          "parentDeptId": null,
+          "deptType": "学院",
+          "createrId": "346900201140649984",
+          "delFlag": "2"
+        },
+        {
+          "id": "373597617310924800",
+          "deptName": "机电",
+          "parentDeptId": "373267803538456576",
+          "deptType": "行政班级",
+          "createrId": "346900201140649984",
+          "delFlag": "1"
+        },
+        {
+          "id": "373605820643934208",
+          "deptName": "计算机一班",
+          "parentDeptId": "373252869039587328",
+          "deptType": "虚拟班级",
+          "createrId": "346900201140649984",
+          "delFlag": "1"
+        },
+        {
+          "id": "373932980466352128",
+          "deptName": "测试用学院",
+          "parentDeptId": null,
+          "deptType": "学院",
+          "createrId": "346900201140649984",
+          "delFlag": "2"
+        },
+        {
+          "id": "373933182057185280",
+          "deptName": "测试用行政班级",
+          "parentDeptId": "373932980466352128",
+          "deptType": "行政班级",
+          "createrId": "346900201140649984",
+          "delFlag": "1"
+        },
+        {
+          "id": "374403704234704896",
+          "deptName": "学院3",
+          "parentDeptId": null,
+          "deptType": "学院",
+          "createrId": "346900201140649984",
+          "delFlag": "2"
+        },
+        {
+          "id": "374403733087322112",
+          "deptName": "学院1",
+          "parentDeptId": null,
+          "deptType": "学院",
+          "createrId": "346900201140649984",
+          "delFlag": "1"
+        },
+        {
+          "id": "374403757955350528",
+          "deptName": "学院5",
+          "parentDeptId": null,
+          "deptType": "学院",
+          "createrId": "346900201140649984",
+          "delFlag": "1"
+        },
+        {
+          "id": "374618564914577408",
+          "deptName": "计算机三班",
+          "parentDeptId": "373252869039587328",
+          "deptType": "行政班级",
+          "createrId": "346900201140649984",
+          "delFlag": "1"
+        }
+      ]
+    }
+  }
+}

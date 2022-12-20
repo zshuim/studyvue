@@ -92,7 +92,8 @@ export default {
     commitPwd(){
         if(loginapi.judgeFormIntegrity(this.$refs['pwdRefs'])){
             if(loginapi.commitNewPwd(this)){
-                this.$router.replace('/about');
+                this.$router.replace('/login');
+                this.$message.success("重置成功");
             }
         }
         
